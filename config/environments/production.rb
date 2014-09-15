@@ -81,7 +81,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   #->Prelang
-  GA.tracker = ""
+  GA.tracker = "UA-54803106-1"
 
 end
 
