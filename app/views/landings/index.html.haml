@@ -15,20 +15,20 @@
     .row.text-center
       .col-md-4
         %span.fa-stack.fa-4x
-          %i.fa.fa-circle.fa-stack-2x.text-primary
-          %i.fa.fa-building-o.fa-stack-1x.fa-inverse
+          %i.fa.fa-circle.fa-stack-2x.fa-inverse
+          %i.fa.fa-building-o.fa-stack-1x.text-primary
         %h4.service-heading Interior and Landscape Design
         %p.service-subheading We create souls for spaces.
       .col-md-4
         %span.fa-stack.fa-4x
-          %i.fa.fa-circle.fa-stack-2x.text-primary
-          %i.fa.fa-paint-brush.fa-stack-1x.fa-inverse
+          %i.fa.fa-circle.fa-stack-2x.fa-inverse
+          %i.fa.fa-paint-brush.fa-stack-1x.text-primary
         %h4.service-heading Furniture and Product Design
         %p.service-subheading We build almost anything, and sometimes for no reason.
       .col-md-4
         %span.fa-stack.fa-4x
-          %i.fa.fa-circle.fa-stack-2x.text-primary
-          %i.fa.fa-laptop.fa-stack-1x.fa-inverse
+          %i.fa.fa-circle.fa-stack-2x.fa-inverse
+          %i.fa.fa-laptop.fa-stack-1x.text-primary
         %h4.service-heading Web Design
         %p.service-subheading We design with passion and deliver value.
 / Portfolio Grid Section
@@ -47,7 +47,16 @@
           %img.img-responsive{:alt => "", :src => image_path('portfolio/clubhouse-small.jpg')}
         .portfolio-caption
           %h4 Clubhouse
-          %p.text-muted Interior and Landscape design
+          %p.text-muted Interior and Landscape Design
+      .col-md-4.col-sm-6.portfolio-item
+        %a.portfolio-link{"data-toggle" => "modal", :href => "#portfolioModal2"}
+          .portfolio-hover
+            .portfolio-hover-content
+              %i.fa.fa-plus.fa-3x
+          %img.img-responsive{:alt => "", :src => image_path('portfolio/sample-flat-small.jpg')}
+        .portfolio-caption
+          %h4 3BHK Sample Flat
+          %p.text-muted Interior Design
 / About Section
 %section#about
   .container
@@ -89,13 +98,13 @@
             %p.text-muted.font-sub Designer
             %ul.list-inline.social-buttons
               %li
-                %a{:href => "#"}
+                %a{:href => "https://twitter.com/sneha_joshi"}
                   %i.fa.fa-twitter
               %li
-                %a{:href => "#"}
+                %a{:href => "https://www.facebook.com/sneha.joshi.923"}
                   %i.fa.fa-facebook
               %li
-                %a{:href => "#"}
+                %a{:href => "https://www.linkedin.com/in/snehajoshi88"}
                   %i.fa.fa-linkedin
       .col-sm-6
         .team-member
@@ -104,13 +113,13 @@
             %p.text-muted.font-sub Developer
             %ul.list-inline.social-buttons
               %li
-                %a{:href => "#"}
+                %a{:href => "https://twitter.com/shirshendoom"}
                   %i.fa.fa-twitter
               %li
-                %a{:href => "#"}
+                %a{:href => "https://www.facebook.com/shirshendu.mukherjee.88"}
                   %i.fa.fa-facebook
               %li
-                %a{:href => "#"}
+                %a{:href => "https://www.linkedin.com/in/shirshendumukherjee"}
                   %i.fa.fa-linkedin
     .row
       .col-lg-8.col-lg-offset-2.text-center
@@ -118,7 +127,7 @@
         %p.large.text-muted.font-sub
           %em Let's build it together.
 / Clients Aside
-%aside.clients
+-#%aside.clients
   .container
     .row
       .col-md-3.col-sm-6
@@ -138,9 +147,9 @@
     .row
       .col-lg-12.text-center
         %h2.section-heading Contact Us
-        %h3.section-subheading.text-muted We're excited to hear about your next big thing!
-        %h3.section-subheading mostly.design@gmail.com
-    .row.font-sub
+        %h3.section-subheading We're excited to hear about your next big thing!
+        %h3.section-subheading= link_to 'mostly.design@gmail.com', 'mailto:mostly.design@gmail.com'
+    -#.row.font-sub
       .col-lg-12
         %form#contactForm{:name => "sentMessage", :novalidate => ""}
           .row
@@ -175,20 +184,43 @@
         .col-lg-8.col-lg-offset-2
           .modal-body
             / Project Details Go Here
-            %h2 Fortune Signature
-            %p.item-intro.text-muted Club House
+            %h2 Club House
+            %p.item-intro.text-muted.font-sub Fortune Signature
             %img.img-responsive{:alt => "", :src => image_path('portfolio/clubhouse.jpg')}
-              %p
-                •	Partitions design which set a theme. Innovative design techniques, custom glass and jaali work.
-                •	Doors and windows were customized framing to stylize the flow.
-                •	Decorative false ceilings with levels, jaali, wallpaper and layered lighting.
-                •	Paneling and cladding to integrate the bare walls and columns into harmony. 
-                •	Custom furniture design incl. reception table, console, storage and display units.
-                •	Pool boundary enclosure which allows light along with privacy.
+            %ul.text-left.font-sub
+              %li Interior design, signages and landscape design. 
+              %li Innovative material combinations and design techniques used.
+              %li Custom designed glass work, jaalis, stone cladding and furniture.
+              %li Landscaping included the pool deck area along with the enclosure design.
               %ul.list-inline
-                %li Date: July 2014
+                %li Date: September 2013 - present
                 %li Client: Fortune Builders
-                %li Category: Interior Design and Landscape consultancy
+                %li Category: Interior and Landscape Design
+              %button.btn.btn-primary{"data-dismiss" => "modal", :type => "button"}
+                %i.fa.fa-times
+                Close Project
+/ Portfolio Modal 2
+#portfolioModal2.portfolio-modal.modal.fade{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
+  .modal-content
+    .close-modal{"data-dismiss" => "modal"}
+      .lr
+        .rl
+    .container
+      .row
+        .col-lg-8.col-lg-offset-2
+          .modal-body
+            / Project Details Go Here
+            %h2 3BHK Sample Flat
+            %p.item-intro.text-muted.font-sub Fortune Heritage
+            %img.img-responsive{:alt => "", :src => image_path('portfolio/sample-flat.jpg')}
+            %ul.text-left.font-sub
+              %li Design to staging for sales.
+              %li Everything was custom designed, from wall paneling, storages to handcrafted furnishings.
+              %li Aesthetics were the prime factor, since the presentation directly changed into revenue.
+              %ul.list-inline
+                %li Date: April 2014
+                %li Client: Fortune Soumya housing
+                %li Category: Interior Design
               %button.btn.btn-primary{"data-dismiss" => "modal", :type => "button"}
                 %i.fa.fa-times
                 Close Project

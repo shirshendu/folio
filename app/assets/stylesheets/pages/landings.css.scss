@@ -214,10 +214,6 @@ fieldset[disabled] .btn-xl.active {
     color: #fff;
 }
 
-.navbar-default.navbar-shrink .nav li a {
-  color: #777
-}
-
 .navbar-default .nav li a:hover,
 .navbar-default .nav li a:focus {
     outline: 0;
@@ -234,6 +230,14 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .navbar-nav>.active>a:focus {
     color: $color-active;
     background-color: $color-navbar;
+}
+
+.navbar-default.navbar-shrink .navbar-nav>li>a {
+  color: #777;
+}
+.navbar-default.navbar-shrink .navbar-nav>li.active>a {
+  color: $color-active;
+  background-color: transparent;
 }
 
 @media(min-width:768px) {
@@ -254,6 +258,7 @@ fieldset[disabled] .btn-xl.active {
     }
 
     .navbar-default .navbar-nav>.active>a {
+        color: $color-active;
     }
 
     .navbar-default.navbar-shrink {
@@ -379,14 +384,14 @@ section h3.section-subheading {
     width: 100%;
     height: 100%;
     opacity: 0;
-    background: rgba(254,209,54,.9);
+    background: $brand-primary;
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     transition: all ease .5s;
 }
 
 #portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
-    opacity: 1;
+    opacity: 0.9;
 }
 
 #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
@@ -671,8 +676,10 @@ section#contact {
     background-repeat: no-repeat;
 }
 
-section#contact .section-heading {
+section#contact {
+  .section-heading, .section-subheading, a {
     color: #fff;
+  }
 }
 
 section#contact .form-group {
@@ -737,7 +744,7 @@ footer {
 footer span.copyright {
     text-transform: uppercase;
     text-transform: none;
-    font-family: $font-main;
+    font-family: $font-sub;
     line-height: 40px;
 }
 
